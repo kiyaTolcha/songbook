@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
-
+import 'Favorites.dart';
+import 'Search.dart';
+import 'Albums.dart';
+import 'Genres.dart';
+import 'Artist.dart';
+import 'All.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -56,55 +61,57 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Center(
       child: Text("መዝሙር ደብተር"),
     ));
+  //  String ly1="""Kotlin can be used together with existing third-party libraries and frameworks, such as jQuery or React. To access third-party frameworks with a strongly-typed API, you can convert TypeScript denitions from the Denitely Typed type denitions repository to Kotlin using the ts2kt tool. Alternatively, you can use the dynamic type to access any framework without strong typing. JetBrains develops and maintains several tools specically for the React community: React bindings as well as Create React Kotlin App. The latter helps you start building React apps with Kotlin with no build conguration. Kotlin is compatible with CommonJS, AMD and UMD, making interaction with dierent module systems straightforward.
+    //    """;
     String ly =
-    ("""አንተን ካገኘሁ ጀምሮ
-        ሕይወቴ በአንተ አምሮ
-        የፍቅርህን ብዛት አልችልም ልገልጻት
-        የምህረትህን ብዛት አልችልም ልገልጻት (፪x)
-        የፈሰሰው ሠማያዊ ፀጋ 
-        አኑሮኛል ከአንተ ጋ 
-        የመረጥከኝ ተባረክልኝ 
-        የወደድከኝ ተባረክልኝ 
-        በመስቀል ላይ ስለ እኔ ሞተሃል 
-        አበሳዬን ወስደሃል 
-        ምን ልክፈልህ 
-        እንዲያው ልገዛልህ (፪x) 
-        ሰው ያረገኝ ፀጋህ ነው 
-        ታሪኬን ለውጦ 
-        ከሞት አስመልጦ 
-        ጌታ ሆይ ተመስገን (፪x)
-        አዝ፦ አንተን ካገኘሁ ጀምሮ 
-        ሕይወቴ በአንተ አምሮ 
-        የፍቅርህን ብዛት አልችልም ልገልጻት 
-        የምህረትህን ብዛት አልችልም ልገልጻት (፪x) 
-        የዓለም ክብር ሃብት አያጓጓኝም 
-        ከአንተ አይበልጥብኝም 
-        መርጬሃለሁ እከተልሃለሁ 
-        የምህረትህ የፍቅርህ ብዛቱ 
-        አልበረደም ግለቱ 
-        ያዘምረኛል ተድላዬ ሆኖኛል 
-        ያዘምረኛል ሞገሴ ሆኖኛል 
-        ሰው ያረገኝ ፀጋህ ነው 
-        ታሪኬን ለውጦ 
-        ከሞት አስመልጦ 
-        ጌታ ሆይ ተመስገን (፪x)
-        አዝ፦ አንተን ካገኘሁ ጀምሮ 
-        ሕይወቴ በአንተ አምሮ 
-        የፍቅርህን ብዛት አልችልም ልገልጻት 
-        የምህረትህን ብዛት አልችልም ልገልጻት 
-        በመረቅህልኝ አዲስ ህያው መንገድ 
-        ደስ እያለኝ ልራመድ 
-        መጨረሻዬ ኢየሱስ ጌታዬ 
-        መጨረሻዬ አንተ ነህ ጌታዬ 
-        የሩቅ አገር የፅዮን ተጓዥ ነን 
-        በሠማይ አገር ያለኝ 
-        ታድያለሁ አገሬ ገባለሁ 
-        ታድያለሁ ዘለዓለም አርፋለሁ 
-        ሃሌሉያ 
-        ሰው ያረገኝ ፀጋህ ነው 
-        ታሪኬን ለውጦ 
-        ከሞት አስመልጦ 
-        ጌታ ሆይ ተመስገን (፪x)""");
+    """አንተን ካገኘሁ ጀምሮ
+ሕይወቴ በአንተ አምሮ
+የፍቅርህን ብዛት አልችልም ልገልጻት
+የምህረትህን ብዛት አልችልም ልገልጻት (፪x)
+የፈሰሰው ሠማያዊ ፀጋ 
+አኑሮኛል ከአንተ ጋ 
+የመረጥከኝ ተባረክልኝ 
+የወደድከኝ ተባረክልኝ 
+በመስቀል ላይ ስለ እኔ ሞተሃል 
+አበሳዬን ወስደሃል 
+ምን ልክፈልህ 
+እንዲያው ልገዛልህ (፪x) 
+ሰው ያረገኝ ፀጋህ ነው 
+ታሪኬን ለውጦ 
+ከሞት አስመልጦ 
+ጌታ ሆይ ተመስገን (፪x)
+አዝ፦ አንተን ካገኘሁ ጀምሮ 
+ሕይወቴ በአንተ አምሮ 
+የፍቅርህን ብዛት አልችልም ልገልጻት 
+የምህረትህን ብዛት አልችልም ልገልጻት (፪x) 
+የዓለም ክብር ሃብት አያጓጓኝም 
+ከአንተ አይበልጥብኝም 
+መርጬሃለሁ እከተልሃለሁ 
+የምህረትህ የፍቅርህ ብዛቱ 
+አልበረደም ግለቱ 
+ያዘምረኛል ተድላዬ ሆኖኛል 
+ያዘምረኛል ሞገሴ ሆኖኛል 
+ሰው ያረገኝ ፀጋህ ነው 
+ታሪኬን ለውጦ 
+ከሞት አስመልጦ 
+ጌታ ሆይ ተመስገን (፪x)
+አዝ፦ አንተን ካገኘሁ ጀምሮ 
+ሕይወቴ በአንተ አምሮ 
+የፍቅርህን ብዛት አልችልም ልገልጻት 
+የምህረትህን ብዛት አልችልም ልገልጻት 
+በመረቅህልኝ አዲስ ህያው መንገድ 
+ደስ እያለኝ ልራመድ 
+መጨረሻዬ ኢየሱስ ጌታዬ 
+መጨረሻዬ አንተ ነህ ጌታዬ 
+የሩቅ አገር የፅዮን ተጓዥ ነን 
+በሠማይ አገር ያለኝ 
+ታድያለሁ አገሬ ገባለሁ 
+ታድያለሁ ዘለዓለም አርፋለሁ 
+ሃሌሉያ 
+ሰው ያረገኝ ፀጋህ ነው 
+ታሪኬን ለውጦ 
+ከሞት አስመልጦ
+ጌታ ሆይ ተመስገን (፪x)""";
     final drawerItems = ListView(
       children: <Widget>[
         drawerHeader,
@@ -113,24 +120,24 @@ class _MyHomePageState extends State<MyHomePage> {
           leading: Icon(
             Icons.album,
           ),
-          onTap: () => Navigator.of(context).push(_Page1()),
+          onTap: () => Navigator.of(context).push(Albums()),
         ),
         ListTile(
             title: Text('ዘማሪ'),
             leading: Icon(Icons.mic),
-            onTap: () => Navigator.of(context).push(_Page2())),
+            onTap: () => Navigator.of(context).push(Artist())),
         ListTile(
             title: Text('አይነት'),
             leading: Icon(Icons.music_note),
-            onTap: () => Navigator.of(context).push(_Page3())),
+            onTap: () => Navigator.of(context).push(Genres())),
         ListTile(
             title: Text('ሁሉም'),
             leading: Icon(Icons.list),
-            onTap: () => Navigator.of(context).push(_Page4())),
+            onTap: () => Navigator.of(context).push(All())),
         ListTile(
             title: Text('የተወደዱ'),
             leading: Icon(Icons.favorite),
-            onTap: () => Navigator.of(context).push(_Page6()))
+            onTap: () => Navigator.of(context).push(Favorites()))
       ],
     );
     return Scaffold(
@@ -144,7 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
           IconButton(
             icon: Icon(Icons.search),
             onPressed: () {
-              Navigator.of(context).push(_Page5());
+              Navigator.of(context).push(Search());
             },
           )
         ],
@@ -174,13 +181,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               Expanded(
-                child: Text(
-                  ly,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
+                child: SingleChildScrollView(
+                  child: Text(
+                    ly,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 17
+                      //backgroundColor: Colors.orange,
+                    ),
 
                   ),
-
                 ),
               ),
             ],
@@ -194,74 +204,3 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class _Page4 extends MaterialPageRoute<String> {
-  _Page4()
-      : super(builder: (BuildContext context) {
-          return Scaffold(
-            appBar: AppBar(
-              title: Text('ሁሉም'),
-              backgroundColor: Colors.deepOrange,
-            ),
-          );
-        });
-}
-
-class _Page2 extends MaterialPageRoute<String> {
-  _Page2()
-      : super(builder: (BuildContext context) {
-          return Scaffold(
-            appBar: AppBar(
-              title: Text('ዘማሪ'),
-              backgroundColor: Colors.deepOrange,
-            ),
-          );
-        });
-}
-
-class _Page3 extends MaterialPageRoute<String> {
-  _Page3()
-      : super(builder: (BuildContext context) {
-          return Scaffold(
-            appBar: AppBar(
-              title: Text('አይነት'),
-              backgroundColor: Colors.deepOrange,
-            ),
-          );
-        });
-}
-
-class _Page1 extends MaterialPageRoute<String> {
-  _Page1()
-      : super(builder: (BuildContext context) {
-          return Scaffold(
-            appBar: AppBar(
-              title: Text('አልበም'),
-              backgroundColor: Colors.deepOrange,
-            ),
-          );
-        });
-}
-
-class _Page5 extends MaterialPageRoute<String> {
-  _Page5()
-      : super(builder: (BuildContext context) {
-          return Scaffold(
-            appBar: AppBar(
-              title: Text('ፈልግ'),
-              backgroundColor: Colors.deepOrange,
-            ),
-          );
-        });
-}
-
-class _Page6 extends MaterialPageRoute<String> {
-  _Page6()
-      : super(builder: (BuildContext context) {
-          return Scaffold(
-            appBar: AppBar(
-              title: Text('የተወደዱ'),
-              backgroundColor: Colors.deepOrange,
-            ),
-          );
-        });
-}
