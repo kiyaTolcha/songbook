@@ -121,6 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Icons.album,
           ),
           onTap: () => Navigator.of(context).push(Albums()),
+
         ),
         ListTile(
             title: Text('ዘማሪ'),
