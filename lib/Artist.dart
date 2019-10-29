@@ -32,13 +32,7 @@ class Artist extends MaterialPageRoute<String> {
             ),
             actions: <Widget>[
               IconButton(
-                icon:Icon(Icons.code),
-                onPressed: ()=>Navigator.push(
-                  context,
-                  MaterialPageRoute(
-//                    builder: (context)=>CodeScreen(code: Code.silverListCode),
-                  ),
-                ),
+                icon:Icon(Icons.search),
               ),
             ],
           ),
