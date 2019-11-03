@@ -5,45 +5,34 @@ class Artist extends MaterialPageRoute<String> {
   Artist()
       : super(builder: (BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          title: Text('ዘማሪ'),
-          centerTitle: true,
-          backgroundColor: Colors.deepOrange,
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.search),
-              onPressed: () {
-                Navigator.of(context).push(Search());
-              },
-            )
-          ]),
-      body: Column(
-        children: <Widget>[
-          Expanded(
-            child: ListView(
-              children: <Widget>[
-                ListTile(
-                    leading: CircleAvatar(
-                      radius:50.0,
-                      backgroundImage:AssetImage('asset/image1.jpg'),
-                    ),
-                    title: Text("ዘማሪ ስም"),
-                    subtitle: Text("አልበም")
-                ),
-                ListTile(
-                    leading: CircleAvatar(
-                      radius:50.0,
-                      backgroundImage:AssetImage('asset/image2.jpg'),
-                    ),
-                    title: Text("ዘማሪ ስም"),
-                    subtitle: Text("አልበም")
-                ),
-
-              ],
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar(
+            pinned: true,
+            title: Text('ዘማሪ ስም'),
+            expandedHeight: 200.0,
+            flexibleSpace: new FlexibleSpaceBar(
+              background: Image.asset('asset/image1.jpg'),
             ),
+            backgroundColor: Colors.transparent,
+          ),
+          SliverList(
+            delegate: new SliverChildBuilderDelegate((context,index)=>
+                Card(
+              child: Container(padding: EdgeInsets.all(10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(width: 5,),
+                    Text("Album"),
+                  ],
+                ),
+              )
+            )),
           )
         ],
       ),
     );
   });
 }
+

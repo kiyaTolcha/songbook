@@ -3,7 +3,7 @@ import 'Favorites.dart';
 import 'Search.dart';
 import 'Albums.dart';
 import 'Genres.dart';
-import 'Artist.dart';
+import 'ArtistList.dart';
 import 'All.dart';
 void main() => runApp(MyApp());
 
@@ -117,16 +117,14 @@ class _MyHomePageState extends State<MyHomePage> {
         drawerHeader,
         ListTile(
           title: Text('አልበም'),
-          leading: Icon(
-            Icons.album,
-          ),
+          leading: Icon(Icons.album),
           onTap: () => Navigator.of(context).push(Albums()),
 
         ),
         ListTile(
             title: Text('ዘማሪ'),
             leading: Icon(Icons.mic),
-            onTap: () => Navigator.of(context).push(Artist())),
+            onTap: () => Navigator.of(context).push(ArtistList())),
         ListTile(
             title: Text('አይነት'),
             leading: Icon(Icons.music_note),
