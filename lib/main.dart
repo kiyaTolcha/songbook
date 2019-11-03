@@ -5,6 +5,7 @@ import 'Albums.dart';
 import 'Genres.dart';
 import 'ArtistList.dart';
 import 'All.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -61,10 +62,9 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Center(
       child: Text("መዝሙር ደብተር"),
     ));
-  //  String ly1="""Kotlin can be used together with existing third-party libraries and frameworks, such as jQuery or React. To access third-party frameworks with a strongly-typed API, you can convert TypeScript denitions from the Denitely Typed type denitions repository to Kotlin using the ts2kt tool. Alternatively, you can use the dynamic type to access any framework without strong typing. JetBrains develops and maintains several tools specically for the React community: React bindings as well as Create React Kotlin App. The latter helps you start building React apps with Kotlin with no build conguration. Kotlin is compatible with CommonJS, AMD and UMD, making interaction with dierent module systems straightforward.
+    //  String ly1="""Kotlin can be used together with existing third-party libraries and frameworks, such as jQuery or React. To access third-party frameworks with a strongly-typed API, you can convert TypeScript denitions from the Denitely Typed type denitions repository to Kotlin using the ts2kt tool. Alternatively, you can use the dynamic type to access any framework without strong typing. JetBrains develops and maintains several tools specically for the React community: React bindings as well as Create React Kotlin App. The latter helps you start building React apps with Kotlin with no build conguration. Kotlin is compatible with CommonJS, AMD and UMD, making interaction with dierent module systems straightforward.
     //    """;
-    String ly =
-    """አንተን ካገኘሁ ጀምሮ
+    String ly = """አንተን ካገኘሁ ጀምሮ
 ሕይወቴ በአንተ አምሮ
 የፍቅርህን ብዛት አልችልም ልገልጻት
 የምህረትህን ብዛት አልችልም ልገልጻት (፪x)
@@ -119,7 +119,6 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('አልበም'),
           leading: Icon(Icons.album),
           onTap: () => Navigator.of(context).push(Albums()),
-
         ),
         ListTile(
             title: Text('ዘማሪ'),
@@ -156,20 +155,18 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: SafeArea(
-        child:Center(
+        child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
-                radius:50.0,
+                radius: 50.0,
                 //backgroundImage:AssetImage('image/img.jpg'),
-
               ),
               Text(
                 'አገኘሁ ይደግ',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-
                 ),
               ),
               SizedBox(
@@ -184,11 +181,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Text(
                     ly,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 17
-                      //backgroundColor: Colors.orange,
-                    ),
-
+                    style: TextStyle(fontSize: 17
+                        //backgroundColor: Colors.orange,
+                        ),
                   ),
                 ),
               ),
@@ -202,4 +197,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-

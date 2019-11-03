@@ -11,13 +11,13 @@ class Artist extends MaterialPageRoute<String> {
             pinned: true,
             title: Text('ዘማሪ ስም'),
             expandedHeight: 200.0,
-            flexibleSpace: new FlexibleSpaceBar(
+            flexibleSpace: FlexibleSpaceBar(
               background: Image.asset('asset/image1.jpg'),
             ),
             backgroundColor: Colors.transparent,
           ),
           SliverList(
-            delegate: new SliverChildBuilderDelegate((context,index)=>
+            delegate: SliverChildBuilderDelegate((context,index)=>
                 Card(
               child: Container(padding: EdgeInsets.all(10.0),
                 child: Row(
@@ -25,6 +25,7 @@ class Artist extends MaterialPageRoute<String> {
                   children: <Widget>[
                     SizedBox(width: 5,),
                     Text("Album"),
+
                   ],
                 ),
               )
