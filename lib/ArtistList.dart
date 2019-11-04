@@ -10,7 +10,7 @@ class ArtistList extends MaterialPageRoute<String> {
       appBar: AppBar(
           title: Text('ዘማሪ'),
           centerTitle: true,
-          backgroundColor: Colors.deepOrange,
+          backgroundColor: Theme.of(context).canvasColor,
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.search),

@@ -3,10 +3,12 @@ class Favorites extends MaterialPageRoute<String> {
   Favorites()
       : super(builder: (BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
+
         title: Text('የተወደዱ'),
         centerTitle: true,
-        backgroundColor: Colors.deepOrange,
+        backgroundColor: Theme.of(context).canvasColor,
       ),
       body: Container(
         child: ListView(

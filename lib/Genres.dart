@@ -8,7 +8,7 @@ class Genres extends MaterialPageRoute<String> {
             appBar: AppBar(
                 title: Text('አይነት'),
                 centerTitle: true,
-                backgroundColor: Colors.deepOrange,
+                backgroundColor: Theme.of(context).canvasColor,
                 actions: <Widget>[
                   IconButton(
                     icon: Icon(Icons.search),

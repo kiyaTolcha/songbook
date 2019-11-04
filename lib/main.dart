@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepOrange,
       ),
       home: MyHomePage(title: 'መዝሙር ደብተር'),
     );
@@ -143,7 +143,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         backgroundColor: Colors.deepOrange,
-        title: Text("መዝሙር ደብተር"),
+        title: Text("አገኘሁ ይደግ"),
         centerTitle: true,
         actions: <Widget>[
           IconButton(
@@ -159,14 +159,12 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              CircleAvatar(
-                radius: 50.0,
-                //backgroundImage:AssetImage('image/img.jpg'),
-              ),
+
               Text(
-                'አገኘሁ ይደግ',
+                'አንተን ካገኘሁ ጀምሮ',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
+                  fontSize: 22.0
                 ),
               ),
               SizedBox(

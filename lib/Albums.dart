@@ -7,7 +7,7 @@ class Albums extends MaterialPageRoute<String> {
       appBar: AppBar(
         title: Text('አልበም'),
         centerTitle: true,
-        backgroundColor: Colors.deepOrange,
+          backgroundColor: Theme.of(context).canvasColor,
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.search),
